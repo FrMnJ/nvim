@@ -89,6 +89,3 @@ To reproduce the exact plugin versions from `lazy-lock.json`, run `:Lazy restore
 ## Notes
 
 - Leader is `<space>`; local leader is `\`.
-- `after/ftplugin/javascript.lua` references an undefined `opts` variable, so
-  `<F5>` errors in JavaScript buffers. Fix it with
-  `local opts = { buffer = true, silent = true }` before using.
