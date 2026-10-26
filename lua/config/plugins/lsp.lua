@@ -21,10 +21,37 @@ return {
 
 	    vim.keymap.set("n", "<C-t>", function() vim.diagnostic.open_float() end)
 
-	    vim.lsp.enable('lua_ls')
-	    vim.lsp.enable('php_lsp')
-	    vim.lsp.enable('vue_ls')
-	    vim.lsp.enable('vtsls')
+	    local vue_plugin = {
+		name = "@vue/typescript-plugin",
+		location = vim.fn.stdpath("config")
+		.. "/node_modules/@vue/typescript-plugin",
+		languages = { "vue" },
+		configNamespace = "typescript",
+	    }
+
+	    vim.lsp.config("vtsls", {
+		settings = {
+		    vtsls = {
+			tsserver = {
+			    globalPlugins = { vue_plugin },
+			},
+		    },
+		},
+		filetypes = {
+		    "javascript",
+		    "javascriptreact",
+		    "typescript",
+		    "typescriptreact",
+		    "vue",
+		},
+	    })
+
+	    vim.lsp.enable({
+		"lua_ls",
+		"php_lsp",
+		"vtsls",
+		"vue_ls",
+	    })
 	end,
     }
 }
