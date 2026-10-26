@@ -19,6 +19,8 @@ return {
 		virtual_lines = true,
 	    })
 
+	    vim.keymap.set("n", "<C-t>", function() vim.diagnostic.open_float() end)
+
 	    vim.lsp.enable('lua_ls')
 	    vim.lsp.enable('ts_ls')
 	    vim.lsp.enable('php_lsp')
