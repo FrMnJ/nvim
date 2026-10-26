@@ -22,8 +22,9 @@ return {
 	    vim.keymap.set("n", "<C-t>", function() vim.diagnostic.open_float() end)
 
 	    vim.lsp.enable('lua_ls')
-	    vim.lsp.enable('ts_ls')
 	    vim.lsp.enable('php_lsp')
+	    vim.lsp.enable('vue_ls')
+	    vim.lsp.enable('vtsls')
 	end,
     }
 }
