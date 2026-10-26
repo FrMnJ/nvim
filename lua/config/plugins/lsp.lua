@@ -15,6 +15,10 @@ return {
 	    },
 	},
 	config = function()
+	    vim.diagnostic.config({
+		virtual_lines = true,
+	    })
+
 	    vim.lsp.enable('lua_ls')
 	    vim.lsp.enable('ts_ls')
 	    vim.lsp.enable('php_lsp')
