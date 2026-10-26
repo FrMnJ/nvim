@@ -19,7 +19,7 @@ return {
 		virtual_lines = true,
 	    })
 
-	    vim.keymap.set("n", "<C-t>", function() vim.diagnostic.open_float() end)
+	    vim.keymap.set("n", "<leader>tf", function() vim.diagnostic.open_float() end)
 
 	    local vue_plugin = {
 		name = "@vue/typescript-plugin",
