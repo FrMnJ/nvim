@@ -1,4 +1,5 @@
 require("config.lazy")
+require("config.debug")
 
 vim.opt.shiftwidth = 4
 vim.opt.number = true
