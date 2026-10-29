@@ -43,6 +43,7 @@ return {
 		    "typescript",
 		    "typescriptreact",
 		    "vue",
+		    "rust-analyzer",
 		},
 	    })
 
