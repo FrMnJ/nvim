@@ -51,6 +51,7 @@ return {
 		"php_lsp",
 		"vtsls",
 		"vue_ls",
+		"tailwindcss",
 	    })
 	end,
     }
