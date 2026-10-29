@@ -28,7 +28,7 @@ return {
 		    cwd = vim.fn.stdpath("config")
 		}
 	    end)
-	    vim.keymap.set('n', '<space>fr', require('telescope.builtin').lsp_references)
+	    vim.keymap.set('n', '<space>fr', require('telescope.builtin').oldfiles)
 	    vim.keymap.set('n', '<space>fb', require('telescope.builtin').buffers)
 	    vim.keymap.set('n', '<space>fg', require('telescope.builtin').live_grep)
 	    vim.keymap.set('n', '<space>fh', require('telescope.builtin').help_tags)
