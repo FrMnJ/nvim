@@ -43,8 +43,13 @@ return {
 		    "typescript",
 		    "typescriptreact",
 		    "vue",
-		    "rust-analyzer",
 		},
+	    })
+
+	    vim.lsp.config("rust-analyzer", {
+		cmd = { "rust-analyzer" },
+		filetypes = { "rust" },
+		root_markers = { "Cargo.toml", "rust-project.json", ".git" },
 	    })
 
 	    vim.lsp.enable({
@@ -53,6 +58,7 @@ return {
 		"vtsls",
 		"vue_ls",
 		"tailwindcss",
+		"rust-analyzer",
 	    })
 	end,
     }
